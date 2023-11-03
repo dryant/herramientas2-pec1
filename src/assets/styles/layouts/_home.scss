@@ -274,6 +274,31 @@ Seccion Ejemplos de uso
 }
 
 /* ------------------------------------------------------------*\
+Footer
+\*------------------------------------------------------------ */
+
+.footer {
+  color: #fff;
+  background-color: #000;
+}
+
+.footer-fullw {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.footer-fullw__column {
+  flex-basis: 50%;
+}
+
+.footer-fullw__column:nth-child(2) {
+  text-align: right;
+}
+
+/* ------------------------------------------------------------*\
 Estilos Móviles
 \*------------------------------------------------------------ */
 
