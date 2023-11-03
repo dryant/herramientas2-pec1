@@ -303,6 +303,11 @@ Estilos Móviles
 \*------------------------------------------------------------ */
 
 @media screen and (width <= 768px) {
+  img {
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
   .content__full-width-section,
   .content__section,
   .section__cols {
@@ -318,7 +323,6 @@ Estilos Móviles
   .section__right-column-delta {
     order: -1;
   }
-  img { margin-top: 30px; }
 
   .content__left-column,
   .content__right-column {
