@@ -1,57 +1,160 @@
-* {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  font-family: $font-body;
+  font-weight: $font-weight;
+  line-height: 1.5;
 }
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
+.main {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
+  margin: auto;
+  background-color: $print3d-bg;
+  padding: 25px 0px;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.section__left-column--intro--header2 {
+  font-size: 44px;
 }
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+.section__left-column--intro--text {
+  font-size: 22px;
+}
+.section__header2,
+.section__left-column--header2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.full-width-section--dark {
+  background-color: #000;
+  color: $font-color-light;
+}
+.section__header2 span {
+  display: block;
+  line-height: 0.8;
+}
+.section {
+  max-width: $site-width;
+  display: block;
+  margin: 40px auto;
   text-align: center;
+  padding: 20px;
+}
+.section-intro {
+  padding: 0 20px;
+}
+
+#impresoras .section__cols {
+  margin: 30px auto 0;
+}
+.section__cols,
+.section__left-column__gallery,
+.section__right-column__gallery {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: space-evenly;
+}
+
+.section__cols {
+  align-items: center;
+}
+.section__header3 {
+  font-family: $font-headers;
+  font-size: 20px;
+}
+.section__left-column,
+.section__right-column {
+  flex-basis: 50%;
+}
+
+.section__right-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__menu ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.intro {
+  position: relative;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/dott.png);
+  background-repeat: repeat;
+  padding: 20px;
+}
+.intro .section,
+header .section {
+  margin: 0 auto;
+}
+.section__right-column--intro-img {
+  max-height: 250px;
+}
+
+
+.header__logo {
+  font-size: 32px;
+  line-height: 0.7;
+}
+.header__subtitle {
+  font-size: 12px;
+}
+.header__logo, 
+.section__left-column--intro--header2,
+.section__left-column--header2,
+.section__header2,
+.header__menu {
+  font-family: $font-headers;
+  color: $font-color-headers;
+}
+
+.header__menu {
+  color: $font-color-dark;
+}
+.content__left-column__intro__header2, .content__section-header2 {
+  color: $print3d-brand;
+  font-size: 36px;
+}
+
+.content__full-width-section--dark {
+  background-color: #000;
+  color: $font-color-light;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .content__full-width-section, 
+  .content__section,
+  .section__cols {
+    flex-direction: column;
+  }
+  
+  .content__left-column,
+  .content__right-column {
+    flex-basis: auto;
+  }
 }
