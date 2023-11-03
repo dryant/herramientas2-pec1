@@ -15,12 +15,13 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
 }
 
 body {
+  
   font-family: $font-body;
   font-weight: $font-weight;
   line-height: 1.5;
@@ -31,7 +32,17 @@ body {
   background-color: $print3d-bg;
   padding: 25px 0px;
 }
-
+.section {
+  max-width: $site-width;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
+header .section,
+.intro .section {
+  margin: 0 auto;
+}
 .section__left-column--intro--header2 {
   font-size: 44px;
 }
@@ -51,31 +62,33 @@ body {
   display: block;
   line-height: 0.8;
 }
-.section {
-  max-width: $site-width;
-  display: block;
-  margin: 40px auto;
-  text-align: center;
-  padding: 20px;
-}
+
 .section-intro {
   padding: 0 20px;
 }
 
-#impresoras .section__cols {
-  margin: 30px auto 0;
-}
+
 .section__cols,
-.section__left-column__gallery,
-.section__right-column__gallery {
+.section__left-column--gallery,
+.section__right-column--gallery {
   display: flex;
   flex-direction: row;
   text-align: left;
   justify-content: space-evenly;
 }
-
 .section__cols {
   align-items: center;
+}
+#impresoras .section__cols {
+  margin: 30px auto 0;
+}
+#ejemplos .section__right-column,
+#impresoras .section__right-column-delta {
+  display: initial;
+}
+#ejemplos .section__cols {
+  gap: 50px;
+  margin-bottom: 50px;
 }
 .section__header3 {
   font-family: $font-headers;
@@ -105,10 +118,7 @@ body {
   background-repeat: repeat;
   padding: 20px;
 }
-.intro .section,
-header .section {
-  margin: 0 auto;
-}
+
 .section__right-column--intro-img {
   max-height: 250px;
 }
@@ -133,7 +143,7 @@ header .section {
 .header__menu {
   color: $font-color-dark;
 }
-.content__left-column__intro__header2, .content__section-header2 {
+.content__left-column-intro--header2, .content__section-header2 {
   color: $print3d-brand;
   font-size: 36px;
 }
@@ -152,9 +162,25 @@ header .section {
   .section__cols {
     flex-direction: column;
   }
-  
+  .section__cols,
+  .section__left-column--gallery,
+  .section__right-column--gallery {
+    text-align: center;
+  }
+  .section__right-column-delta {
+    order: -1;
+  }
+  img {margin-top: 30px;}
   .content__left-column,
   .content__right-column {
     flex-basis: auto;
+  }
+  .section__left-column--gallery,
+  .section__right-column--gallery {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
